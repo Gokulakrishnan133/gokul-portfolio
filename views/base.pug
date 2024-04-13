@@ -1,0 +1,665 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title vCard - Personal Portfolio
+  //
+    - favicon
+  link(rel='shortcut icon' href='./assets/images/logo.ico' type='image/x-icon')
+  //
+    - custom css link
+  link(rel='stylesheet' type='text/css' href='./style/style.css')
+  //
+    - google font link
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap' rel='stylesheet')
+//
+  - #MAIN
+main
+  //
+    - #SIDEBAR
+  aside.sidebar(data-sidebar='')
+    .sidebar-info
+      figure.avatar-box
+        img(src='./assets/images/photo.jpg' alt='Gokulakrishnan M' width='80')
+      .info-content
+        h1.name(title='Gokulakrishnan M') Gokulakrishnan M
+        p.title Backend Web developer
+      button.info_more-btn(data-sidebar-btn='')
+        span Show Contacts
+        ion-icon(name='chevron-down')
+    .sidebar-info_more
+      .separator
+      ul.contacts-list
+        li.contact-item
+          .icon-box
+            ion-icon(name='mail-outline')
+          .contact-info
+            p.contact-title Email
+            a.contact-link(href='mailto:gokrish133@gmail.com') gokrish133@gmail.com
+        li.contact-item
+          .icon-box
+            ion-icon(name='phone-portrait-outline')
+          .contact-info
+            p.contact-title Phone
+            a.contact-link(href='tel:+12133522795') +91 9080396989
+        li.contact-item
+          .icon-box
+            ion-icon(name='calendar-outline')
+          .contact-info
+            p.contact-title Birthday
+            time(datetime='1998-10-13') October 13, 1998
+        li.contact-item
+          .icon-box
+            ion-icon(name='location-outline')
+          .contact-info
+            p.contact-title Location
+            address Chennai, TamilNadu, India
+      .separator
+      ul.social-list
+        li.social-item
+          a.social-link(href='https://www.linkedin.com/in/gokulakrishnan-m-b070421ab/')
+            ion-icon(name='logo-linkedin')
+        //
+          <li class="social-item">
+          <a href="#" class="social-link">
+          <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        a.social-link(href='https://leetcode.com/Gokulakrishnan13/')
+          img(src='./assets/images/leetcode.svg' alt='logo leetcode' width='20')
+        li.social-item
+          a.social-link(href='https://github.com/Gokulakrishnan133')
+            ion-icon(name='logo-github')
+  //
+    - #main-content
+  .main-content
+    //
+      - #NAVBAR
+    nav.navbar
+      ul.navbar-list
+        li.navbar-item
+          button.navbar-link.active(data-nav-link='') About
+        li.navbar-item
+          button.navbar-link(data-nav-link='') Resume
+        li.navbar-item
+          button.navbar-link(data-nav-link='') Portfolio
+        //
+          <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+        li.navbar-item
+          button.navbar-link(data-nav-link='') Contact
+    //
+      - #ABOUT
+    article.about.active(data-page='about')
+      header
+        h2.h2.article-title About me
+      section.about-text
+        p
+          | &#x1F680; Passionate Node.js Developer with 2+ years of experience| Building Scalable and Efficient Web Applications &#x1F310; | Expert in NodeJs, ExpressJs, REST APIs, MongoDB, MySQL, Javascript and Java | Proven Track record of writing clean, maintainable code and staying up-to-date with the latest trends | Seeking new opportunities in Backend Web Development
+        p
+          | &#x1F4BB; Armed with a keyboard and a cup of coffee, I embark on thrilling coding adventures, transforming complex problems into elegant solutions with the power of Node.js. From architecting APIs to optimizing database performance, I thrive in the dynamic realm of backend development.
+      //
+        - service
+      section.service
+        h3.h3.service-title What i&apos;m doing
+        ul.service-list
+          li.service-item
+            .service-icon-box
+              img(src='./assets/images/icon-dev.svg' alt='Web development icon' width='40')
+            .service-content-box
+              h4.h4.service-item-title Web development
+              p.service-item-text
+                | High-quality development of sites at a professional level.
+          li.service-item
+            .service-icon-box
+              img(src='./assets/images/icon-design.svg\
+              ' alt='design icon' width='40')
+            .service-content-box
+              h4.h4.service-item-title Database design
+              p.service-item-text
+                | Design high-quality database schemas at a professional level.
+          li.service-item
+            .service-icon-box
+              img(src='./assets/images/security-1.jpg' alt='security icon' width='50')
+            .service-content-box
+              h4.h4.service-item-title Security Implementation
+              p.service-item-text
+                | Implement encryption, authentication, and authorization mechanisms.
+          li.service-item
+            .service-icon-box
+              img(src='./assets/images/api-1.jpg' alt='api icon' width='50')
+            .service-content-box
+              h4.h4.service-item-title RESTful API Design
+              p.service-item-text
+                | I make scalable, reliable and easy to use REST APIs at a professional level.
+      //
+        - testimonials
+      section.testimonials
+        h3.h3.testimonials-title Testimonials
+        ul.testimonials-list.has-scrollbar
+          li.testimonials-item
+            .content-card(data-testimonials-item='')
+              figure.testimonials-avatar-box
+                img(src='./assets/images/avatar-1.png' alt='Ram Prasath Ganesaraja' width='60' data-testimonials-avatar='')
+              h4.h4.testimonials-item-title(data-testimonials-title='') Ram Prasath Ganesaraja
+              .testimonials-text(data-testimonials-text='')
+                p
+                  | Gokulakrishnan is a talented software developer who consistently meets project deadlines and delivers high-quality code. His ability to translate complex requirements into efficient and scalable solutions has been essential to the success of our software projects.
+                  br
+                  b &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Senior Consultant(Infosys)  
+          li.testimonials-item
+            .content-card(data-testimonials-item='')
+              figure.testimonials-avatar-box
+                img(src='./assets/images/avatar-2.png' alt='Suvitha' width='60' data-testimonials-avatar='')
+              h4.h4.testimonials-item-title(data-testimonials-title='') Suvitha
+              .testimonials-text(data-testimonials-text='')
+                p
+                  | Gokulakrishnan's strong work ethic and dedication to continuous improvement make him a valuable member of our development team. His proactive approach to identifying and addressing potential issues ensures timely delivery of projects.
+                  br
+                  b &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Technical Manager(Infosys) 
+          li.testimonials-item
+            .content-card(data-testimonials-item='')
+              figure.testimonials-avatar-box
+                img(src='./assets/images/avatar-3.png' alt='Kanika Sharma' width='60' data-testimonials-avatar='')
+              h4.h4.testimonials-item-title(data-testimonials-title='') Kanika Sharma
+              .testimonials-text(data-testimonials-text='')
+                p
+                  | Gokulakrishnan is an exceptional software developer with a passion for learning and staying updated on the latest technologies. His creative thinking and problem-solving abilities have led to the successful implementation of several key features in our software products.
+                  
+                  br
+                  b &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Senior Consultant(Infosys) 
+          li.testimonials-item
+            .content-card(data-testimonials-item='')
+              figure.testimonials-avatar-box
+                img(src='./assets/images/avatar-4.png' alt='Venkatesh Gattu' width='60' data-testimonials-avatar='')
+              h4.h4.testimonials-item-title(data-testimonials-title='') Venkatesh Gattu
+              .testimonials-text(data-testimonials-text='')
+                p
+                  | Gokulakrishnan is a dedicated software developer who consistently goes above and beyond to deliver results. His strong communication skills and ability to work well under pressure make him a trusted member of our development team.
+                  
+                  br
+                  b &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Senior Associate Consultant(Infosys) 
+      //
+        - testimonials modal
+      .modal-container(data-modal-container='')
+        .overlay(data-overlay='')
+        section.testimonials-modal
+          button.modal-close-btn(data-modal-close-btn='')
+            ion-icon(name='close-outline')
+          .modal-img-wrapper
+            figure.modal-avatar-box
+              img(src='./assets/images/avatar-1.png' alt='Daniel lewis' width='80' data-modal-img='')
+            img(src='./assets/images/icon-quote.svg' alt='quote icon')
+          .modal-content
+            h4.h3.modal-title(data-modal-title='') Daniel lewis
+            time(datetime='2021-06-14') 14 June, 2021
+            div(data-modal-text='')
+              p
+                |  Gokulakrishnan's strong work ethic and dedication to continuous improvement make him a valuable member of our development team.
+      //
+        - clients
+      section.clients
+        h3.h3.clients-title Clients
+        ul.clients-list.has-scrollbar
+          li.img-node
+            a(href='#')
+              //
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              img(src='./assets/images/node_logo.png' alt='client logo' width='150px')
+          li.img-express(<a='' href='#')
+            // <img src="./assets/images/logo-2-color.png" alt="client logo">
+            img(src='./assets/images/expressLogo2-removebg-preview (1).jpg' alt='client logo' width='300px')
+          li.clients-item
+            a(href='#')
+              img(src='./assets/images/MongoDB-Logo.png' alt='client logo')
+          li.clients-item
+            a(href='#')
+              img(src='./assets/images/rest-api-1.svg' alt='client logo')
+          li.clients-item
+            a(href='#')
+              img(src='./assets/images/mongoose-removebg-preview (3).jpg' alt='client logo')
+          //
+            <li class="clients-item">
+            <!-- <a href="#">
+            <img src="./assets/images/logo-6-color.png" alt="client logo">
+            </a>
+            <a href="#">
+            <img src="./assets/images/javascriptLogo.png" alt="client logo">
+            </a>
+            </li>
+            <li class="clients-item">
+            <a href="#">
+            <img src="./assets/images/htmlLogo.png" alt="client logo", width="50">
+            </a>
+            </li>
+            <li class="clients-item">
+            <a href="#">
+            <img src="./assets/images/cssLogo.png" alt="client logo">
+            </a>
+            </li>
+    //
+      - #RESUME
+    article.resume(data-page='resume')
+      header
+        h2.h2.article-title Resume
+      section.timeline
+        .title-wrapper
+          .icon-box
+            ion-icon(name='book-outline')
+          h3.h3 Education
+        ol.timeline-list
+          li.timeline-item
+            h4.h4.timeline-item-title Anna University
+            span 2016 &mdash; 2020
+            p.timeline-text
+              | B.E Mechanical Engineering
+              br
+              |                 CGPA: 8.3
+          li.timeline-item
+            h4.h4.timeline-item-title Bharathi Matriculation School
+            span 2015 &mdash; 2016
+            p.timeline-text
+              | HSC 
+              br
+              |                 92.2%
+          li.timeline-item
+            h4.h4.timeline-item-title Bharathi Matriculation School
+            span 2013 &mdash; 2014
+            p.timeline-text
+              | SSLC 
+              br
+              |                 98.8%
+      section.timeline
+        .title-wrapper
+          .icon-box
+            ion-icon(name='book-outline')
+          h3.h3 Experience
+        ol.timeline-list
+          li.timeline-item
+            h4.h4.timeline-item-title INFOSYS | Systems Engineer
+            span 2022 &mdash; Present
+            p.timeline-text
+              b
+                i
+                  | Our team developed a brand agnostic Retail and Corporate Loan Origination Solution for Australian Banking Platform
+              br
+              |                 -&gt; Utilized Node.js framework to create, modify and replace more than 10+ models for Loan Origination Solutions.
+              br
+              |                 -&gt; Assisted in the design and development of server-side logic using Loopback(Node.js Framework). 
+              br
+              |                 -&gt; Designed and implemented 50+ frontend fields in collaboration with FINUX Workbench, ensuring seamless user interactions and an intuitive user interface.
+              br
+              |                 -&gt; Implemented 25+ RESTful APIs to facilitate communication between the frontend and backend, enhancing the overall functionality and responsiveness of the application.
+          //
+            <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Art director</h4>
+            <span>2013 — 2015</span>
+            <p class="timeline-text">
+            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+            quas molestias
+            exceptur.
+            </p>
+            </li>
+            <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Web designer</h4>
+            <span>2010 — 2013</span>
+            <p class="timeline-text">
+            Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+            quas molestias
+            exceptur.
+            </p>
+            </li>
+      section.skill
+        h3.h3.skills-title My skills
+        ul.skills-list.content-card
+          li.skills-item
+            .title-wrapper
+              h5.h5 RESTful API design
+              data(value='80') 80%
+            .skill-progress-bg
+              .skill-progress-fill(style='width: 80%;')
+          li.skills-item
+            .title-wrapper
+              h5.h5 NodeJS
+              data(value='90') 90%
+            .skill-progress-bg
+              .skill-progress-fill(style='width: 90%;')
+          li.skills-item
+            .title-wrapper
+              h5.h5 ExpressJS
+              data(value='90') 90%
+            .skill-progress-bg
+              .skill-progress-fill(style='width: 90%;')
+          li.skills-item
+            .title-wrapper
+              h5.h5 MongoDB
+              data(value='80') 80%
+            .skill-progress-bg
+              .skill-progress-fill(style='width: 80%;')
+          li.skills-item
+            .title-wrapper
+              h5.h5 Mongoose
+              data(value='90') 90%
+            .skill-progress-bg
+              .skill-progress-fill(style='width: 90%;')
+    //
+      - #PORTFOLIO
+    article.portfolio(data-page='portfolio')
+      header
+        h2.h2.article-title Portfolio
+      section.projects
+        ul.filter-list
+          li.filter-item
+            button.active(data-filter-btn='') All
+          //
+            <li class="filter-item">
+            <button data-filter-btn>Web design</button>
+            </li>
+          li.filter-item
+            button(data-filter-btn='') Web development
+          li.filter-item
+            button(data-filter-btn='') Postman Collections
+        .filter-select-box
+          button.filter-select(data-select='')
+            .select-value(data-selecct-value='') Select category
+            .select-icon
+              ion-icon(name='chevron-down')
+          ul.select-list
+            li.select-item
+              button(data-select-item='') All
+            //
+              <li class="select-item">
+              <button data-select-item>Web design</button>
+              </li>
+            li.select-item
+              button(data-select-item='') Web development
+            li.select-item
+              button(data-select-item='') Postman Collections
+        ul.project-list
+          li.project-item.active(data-filter-item='' data-category='web development')
+            a(href='#')
+              figure.project-img
+                .project-item-icon-box
+                  ion-icon(name='eye-outline')
+                img(src='./assets/images/touringSite.png' alt='touring site' loading='lazy')
+              h3.project-title Touring Site
+              p.project-category Web development
+          li.project-item.active(data-filter-item='' data-category='web development')
+            a(href='#')
+              figure.project-img
+                .project-item-icon-box
+                  ion-icon(name='eye-outline')
+                img(src='./assets/images/food-app.png' alt='food app' loading='lazy')
+              h3.project-title Food Ordering App
+              p.project-category Web development
+          li.project-item.active(data-filter-item='' data-category='web development')
+            a(href='#')
+              figure.project-img
+                .project-item-icon-box
+                  ion-icon(name='eye-outline')
+                img(src='./assets/images/chat-3.png' alt='chat app' loading='lazy')
+              h3.project-title Chat App
+              p.project-category Web development
+        
+          li.project-item.active(data-filter-item='' data-category='postman collections')
+            a(href='#')
+              figure.project-img
+                .project-item-icon-box
+                  ion-icon(name='eye-outline')
+                img(src='./assets/images/natours-2.png' alt='natours' loading='lazy')
+              h3.project-title Tour APIs
+              p.project-category Postman Collections
+          li.project-item.active(data-filter-item='' data-category='postman collections')
+            a(href='#')
+              figure.project-img
+                .project-item-icon-box
+                  ion-icon(name='eye-outline')
+                img(src='./assets/images/taskManager.png' alt='task manager api' loading='lazy')
+              h3.project-title Task APIs
+              p.project-category Postman Collections
+          li.project-item.active(data-filter-item='' data-category='postman collections')
+            a(href='#')
+              figure.project-img
+                .project-item-icon-box
+                  ion-icon(name='eye-outline')
+                img(src='./assets/images/food.png' alt='food api' loading='lazy')
+              h3.project-title Food Order APIs
+              p.project-category Postman Collections
+        //
+          li.project-item.active(data-filter-item='' data-category='web development')
+            a(href='#')
+              figure.project-img
+                .project-item-icon-box
+                  ion-icon(name='eye-outline')
+                img(src='./assets/images/todoapp.png' alt='task manager' loading='lazy')
+              h3.project-title Task Manager
+              p.project-category Web development
+          
+            <li class="project-item  active" data-filter-item data-category="web design">
+            <a href="#">
+            <figure class="project-img">
+            <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+            </figure>
+            <h3 class="project-title">Fundo</h3>
+            <p class="project-category">Web design</p>
+            </a>
+            </li>
+          
+            <li class="project-item  active" data-filter-item data-category="applications">
+            <a href="#">
+            <figure class="project-img">
+            <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+            </figure>
+            <h3 class="project-title">Brawlhalla</h3>
+            <p class="project-category">Applications</p>
+            </a>
+            </li>
+          
+            <li class="project-item  active" data-filter-item data-category="web design">
+            <a href="#">
+            <figure class="project-img">
+            <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+            </figure>
+            <h3 class="project-title">DSM.</h3>
+            <p class="project-category">Web design</p>
+            </a>
+            </li>
+          
+            <li class="project-item  active" data-filter-item data-category="web design">
+            <a href="#">
+            <figure class="project-img">
+            <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+            </figure>
+            <h3 class="project-title">MetaSpark</h3>
+            <p class="project-category">Web design</p>
+            </a>
+            </li>
+          
+            <li class="project-item  active" data-filter-item data-category="web development">
+            <a href="#">
+            <figure class="project-img">
+            <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+            </figure>
+            <h3 class="project-title">Summary</h3>
+            <p class="project-category">Web development</p>
+            </a>
+            </li>
+          
+            <li class="project-item  active" data-filter-item data-category="applications">
+            <a href="#">
+            <figure class="project-img">
+            <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+            </figure>
+            <h3 class="project-title">Task Manager</h3>
+            <p class="project-category">Applications</p>
+            </a>
+            </li>
+
+          
+    //
+      - #BLOG
+      <article class="blog" data-page="blog">
+      <header>
+      <h2 class="h2 article-title">Blog</h2>
+      </header>
+      <section class="blog-posts">
+      <ul class="blog-posts-list">
+      <li class="blog-post-item">
+      <a href="#">
+      <figure class="blog-banner-box">
+      <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+      </figure>
+      <div class="blog-content">
+      <div class="blog-meta">
+      <p class="blog-category">Design</p>
+      <span class="dot"></span>
+      <time datetime="2022-02-23">Fab 23, 2022</time>
+      </div>
+      <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+      <p class="blog-text">
+      Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+      </p>
+      </div>
+      </a>
+      </li>
+      <li class="blog-post-item">
+      <a href="#">
+      <figure class="blog-banner-box">
+      <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+      </figure>
+      <div class="blog-content">
+      <div class="blog-meta">
+      <p class="blog-category">Design</p>
+      <span class="dot"></span>
+      <time datetime="2022-02-23">Fab 23, 2022</time>
+      </div>
+      <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+      <p class="blog-text">
+      Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+      </p>
+      </div>
+      </a>
+      </li>
+      <li class="blog-post-item">
+      <a href="#">
+      <figure class="blog-banner-box">
+      <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+      </figure>
+      <div class="blog-content">
+      <div class="blog-meta">
+      <p class="blog-category">Design</p>
+      <span class="dot"></span>
+      <time datetime="2022-02-23">Fab 23, 2022</time>
+      </div>
+      <h3 class="h3 blog-item-title">Design digest #80</h3>
+      <p class="blog-text">
+      Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+      </p>
+      </div>
+      </a>
+      </li>
+      <li class="blog-post-item">
+      <a href="#">
+      <figure class="blog-banner-box">
+      <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+      </figure>
+      <div class="blog-content">
+      <div class="blog-meta">
+      <p class="blog-category">Design</p>
+      <span class="dot"></span>
+      <time datetime="2022-02-23">Fab 23, 2022</time>
+      </div>
+      <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+      <p class="blog-text">
+      Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+      </p>
+      </div>
+      </a>
+      </li>
+      <li class="blog-post-item">
+      <a href="#">
+      <figure class="blog-banner-box">
+      <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+      </figure>
+      <div class="blog-content">
+      <div class="blog-meta">
+      <p class="blog-category">Design</p>
+      <span class="dot"></span>
+      <time datetime="2022-02-23">Fab 23, 2022</time>
+      </div>
+      <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+      <p class="blog-text">
+      Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      </div>
+      </a>
+      </li>
+      <li class="blog-post-item">
+      <a href="#">
+      <figure class="blog-banner-box">
+      <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+      </figure>
+      <div class="blog-content">
+      <div class="blog-meta">
+      <p class="blog-category">Design</p>
+      <span class="dot"></span>
+      <time datetime="2022-02-23">Fab 23, 2022</time>
+      </div>
+      <h3 class="h3 blog-item-title">Design digest #79</h3>
+      <p class="blog-text">
+      Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+      </p>
+      </div>
+      </a>
+      </li>
+      </ul>
+      </section>
+      </article>
+    //
+      - #CONTACT
+    article.contact(data-page='contact')
+      header
+        h2.h2.article-title Contact
+      section.mapbox(data-mapbox='')
+        figure
+          iframe(src='https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d725.5447598359588!2d80.17477323924074!3d13.059143965748724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAzJzMzLjMiTiA4MMKwMTAnMzMuMiJF!5e0!3m2!1sen!2sin!4v1712396269565!5m2!1sen!2sin' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+      section.contact-form
+        h3.h3.form-title Contact Form
+        form.form(action='#' data-form='')
+          .input-wrapper
+            input#fullname.form-input(type='text' name='fullname' placeholder='Full name' required='' data-form-input='')
+            input#email.form-input(type='email' name='email' placeholder='Email address' required='' data-form-input='')
+          textarea#message.form-input(name='message' placeholder='Your Message' required='' data-form-input='')
+          button.form-btn(type='submit' disabled='' data-form-btn='')
+            ion-icon(name='paper-plane')
+            span Send Message
+//
+  - custom js link
+script(type='module' src='./assets/js/script.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+//- script(type='module' src='./assets/js/updateContactForm.js')
+//
+  - ionicon link
+script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+script(nomodule='' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
