@@ -2,6 +2,8 @@ const path = require('path');
 const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
+const compression = require('compression');
+
 const contactFormRouter = require('./routes/contactFormRoutes')
 const viewRouter = require('./routes/viewRoutes')
 
@@ -14,6 +16,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.json({ limit: '10kb' }));
 
+//compressing the text input
+app.use(compression());
 //webpage
 app.use('/', viewRouter);
 

@@ -180,7 +180,7 @@ const updateContactForm = async(name,email,message)=>{
     // console.log('form inside form'+name+''+email+''+message);
       const res = await axios({
           method: 'POST',
-          url: 'http://127.0.0.1:3000/api/v1/contact-form',
+          url: '/api/v1/contact-form',
           data: {
             name,email,message
           }
