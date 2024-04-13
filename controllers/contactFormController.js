@@ -13,7 +13,7 @@ exports.getAllContacts = async(req,res,next) =>{
 exports.createContact = async(req,res,next) =>{
     const contact = await ContactForm.find({email: req.body.email});
     req.user = contact[0];
-    if(contact){
+    if(req.user){
         await ContactForm.findByIdAndUpdate(req.user.id,req.body,{
             new: true,
             runValidators: true});
