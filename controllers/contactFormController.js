@@ -18,7 +18,7 @@ exports.createContact = async(req,res,next) =>{
             new: true,
             runValidators: true});
     }else{
-        await ContactForm.create(contact.id,req.body);
+        await ContactForm.create(req.body);
     }
     res.status(201).json({
         data:{
